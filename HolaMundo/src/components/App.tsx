@@ -1,0 +1,18 @@
+import { Card } from "./Card";
+import { odsAlumnos } from "../data/Ods";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="container">
+      <h1>Listar ODS</h1>
+      <div className="grid">
+        {odsAlumnos.map((item) => (
+          <Card key={item.id} itemOds={item} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;
